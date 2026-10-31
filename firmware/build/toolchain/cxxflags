@@ -1,0 +1,7 @@
+-mlongcalls
+-fno-builtin-memcpy
+-fno-builtin-memset
+-fno-builtin-bzero
+-mdisable-hardware-atomics
+"-specs=G:/esp-projects/esp32_ecg_inference_v1.0/firmware/build/specs/picolibc.specs"
+-fno-rtti

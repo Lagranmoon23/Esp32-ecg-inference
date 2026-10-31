@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+G:/esp-projects/esp32_ecg_inference_v1.0/firmware/build/CMakeFiles/bootloader
+G:/esp-projects/esp32_ecg_inference_v1.0/firmware/build/CMakeFiles/bootloader.rule
+G:/esp-projects/esp32_ecg_inference_v1.0/firmware/build/CMakeFiles/bootloader-complete.rule
+G:/esp-projects/esp32_ecg_inference_v1.0/firmware/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+G:/esp-projects/esp32_ecg_inference_v1.0/firmware/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+G:/esp-projects/esp32_ecg_inference_v1.0/firmware/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+G:/esp-projects/esp32_ecg_inference_v1.0/firmware/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+G:/esp-projects/esp32_ecg_inference_v1.0/firmware/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+G:/esp-projects/esp32_ecg_inference_v1.0/firmware/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+G:/esp-projects/esp32_ecg_inference_v1.0/firmware/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

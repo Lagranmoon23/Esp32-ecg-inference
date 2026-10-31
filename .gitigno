@@ -1,0 +1,14 @@
+# 编译产物
+firmware/build/
+
+# ESP-IDF 托管组件
+firmware/managed_components/
+
+# 临时文件
+*.log
+*.tmp
+.vscode/
+
+# 模型/数据大文件（按需决定是否忽略，见下方说明）
+firmware/main/models/*.espdl
+firmware/main/data/*.bin

@@ -1,0 +1,285 @@
+{
+  "model": "stage1_n_s_vf_streaming",
+  "test_split_read": false,
+  "init_weights": "/media/ecglab506/c91df7e1-f50c-468a-9741-41700680ea81/wym_mcu/MIT-BIH/mitdb-1.0.0/FPGA-based-Tiny-Transformer-model-for-ECG-Arrythmia-Classification/software/tiny_transformer_stage1_n_s_vf.weights.h5",
+  "candidate_weights": "/media/ecglab506/c91df7e1-f50c-468a-9741-41700680ea81/wym_mcu/MIT-BIH/mitdb-1.0.0/FPGA-based-Tiny-Transformer-model-for-ECG-Arrythmia-Classification/software/tiny_transformer_stage1_n_s_vf_streaming_candidate.weights.h5",
+  "selected_weights": "/media/ecglab506/c91df7e1-f50c-468a-9741-41700680ea81/wym_mcu/MIT-BIH/mitdb-1.0.0/FPGA-based-Tiny-Transformer-model-for-ECG-Arrythmia-Classification/software/tiny_transformer_stage1_n_s_vf_streaming_selected.weights.h5",
+  "selected_source": "/media/ecglab506/c91df7e1-f50c-468a-9741-41700680ea81/wym_mcu/MIT-BIH/mitdb-1.0.0/FPGA-based-Tiny-Transformer-model-for-ECG-Arrythmia-Classification/software/tiny_transformer_stage1_n_s_vf.weights.h5",
+  "candidate_selected": false,
+  "selection_reason": "candidate gain -0.0075 was below required +0.0020; retained initial model",
+  "validation_macro_f1_improvement": -0.0074860535890921565,
+  "minimum_required_improvement": 0.002,
+  "streaming_splits": "/media/ecglab506/c91df7e1-f50c-468a-9741-41700680ea81/wym_mcu/MIT-BIH/mitdb-1.0.0/FPGA-based-Tiny-Transformer-model-for-ECG-Arrythmia-Classification/software/patient_independent_hierarchical_streaming_train_val.npz",
+  "parameters": 8335,
+  "preprocessing": {
+    "filter": "causal butter4 0.5-40 Hz + notch50 Q30",
+    "rolling_window_seconds": 10.0,
+    "rolling_update_seconds": 1.0,
+    "rolling_warmup_seconds": 10.0,
+    "clip": 5.0
+  },
+  "augmentation": {
+    "peak_shift_narrow_samples": 3,
+    "peak_shift_wide_samples": 10,
+    "wide_probability": 0.1,
+    "rr_noise_raw_std": [
+      0.004999999888241291,
+      0.004999999888241291,
+      0.004999999888241291,
+      0.004999999888241291,
+      0.00800000037997961,
+      0.00800000037997961
+    ],
+    "amplitude_range": [
+      0.96,
+      1.04
+    ],
+    "waveform_noise_std": 0.008,
+    "baseline_sine_amplitude": 0.01
+  },
+  "training": {
+    "trainable_mode": "head",
+    "trainable_layers": [
+      "encoder_norm",
+      "rr_norm",
+      "rr_embedding",
+      "fusion",
+      "stage1_n_s_vf_head"
+    ],
+    "trainable_parameters": 1823,
+    "learning_rate": 2e-05,
+    "weight_decay": 1e-05
+  },
+  "epochs_run": 6,
+  "best_val_macro_f1_callback": 0.5317597657219547,
+  "initial_validation": {
+    "samples": 9344,
+    "accuracy": 0.889019691780822,
+    "macro_f1": 0.5390815282606417,
+    "per_class_f1": [
+      0.9450679267572357,
+      0.2710413694721826,
+      0.4011352885525071
+    ],
+    "confusion_matrix": [
+      [
+        8000,
+        235,
+        41
+      ],
+      [
+        169,
+        95,
+        14
+      ],
+      [
+        485,
+        93,
+        212
+      ]
+    ],
+    "classification_report": {
+      "N": {
+        "precision": 0.9244280101687081,
+        "recall": 0.9666505558240696,
+        "f1-score": 0.9450679267572357,
+        "support": 8276.0
+      },
+      "S": {
+        "precision": 0.22458628841607564,
+        "recall": 0.34172661870503596,
+        "f1-score": 0.2710413694721826,
+        "support": 278.0
+      },
+      "VF": {
+        "precision": 0.7940074906367042,
+        "recall": 0.2683544303797468,
+        "f1-score": 0.4011352885525071,
+        "support": 790.0
+      },
+      "accuracy": 0.889019691780822,
+      "macro avg": {
+        "precision": 0.647673929740496,
+        "recall": 0.5255772016362842,
+        "f1-score": 0.5390815282606417,
+        "support": 9344.0
+      },
+      "weighted avg": {
+        "precision": 0.8925799569712,
+        "recall": 0.889019691780822,
+        "f1-score": 0.8790270270240401,
+        "support": 9344.0
+      }
+    }
+  },
+  "candidate_validation": {
+    "samples": 9344,
+    "accuracy": 0.8954409246575342,
+    "macro_f1": 0.5315954746715496,
+    "per_class_f1": [
+      0.9484499765147957,
+      0.24014336917562723,
+      0.40619307832422585
+    ],
+    "confusion_matrix": [
+      [
+        8077,
+        143,
+        56
+      ],
+      [
+        182,
+        67,
+        29
+      ],
+      [
+        497,
+        70,
+        223
+      ]
+    ],
+    "classification_report": {
+      "N": {
+        "precision": 0.9224531749657378,
+        "recall": 0.9759545674238763,
+        "f1-score": 0.9484499765147957,
+        "support": 8276.0
+      },
+      "S": {
+        "precision": 0.2392857142857143,
+        "recall": 0.24100719424460432,
+        "f1-score": 0.24014336917562723,
+        "support": 278.0
+      },
+      "VF": {
+        "precision": 0.724025974025974,
+        "recall": 0.28227848101265823,
+        "f1-score": 0.40619307832422585,
+        "support": 790.0
+      },
+      "accuracy": 0.8954409246575342,
+      "macro avg": {
+        "precision": 0.628588287759142,
+        "recall": 0.4997467475603796,
+        "f1-score": 0.5315954746715496,
+        "support": 9344.0
+      },
+      "weighted avg": {
+        "precision": 0.8853515008634839,
+        "recall": 0.8954409246575342,
+        "f1-score": 0.8815308640992521,
+        "support": 9344.0
+      }
+    }
+  },
+  "selected_validation": {
+    "samples": 9344,
+    "accuracy": 0.889019691780822,
+    "macro_f1": 0.5390815282606417,
+    "per_class_f1": [
+      0.9450679267572357,
+      0.2710413694721826,
+      0.4011352885525071
+    ],
+    "confusion_matrix": [
+      [
+        8000,
+        235,
+        41
+      ],
+      [
+        169,
+        95,
+        14
+      ],
+      [
+        485,
+        93,
+        212
+      ]
+    ],
+    "classification_report": {
+      "N": {
+        "precision": 0.9244280101687081,
+        "recall": 0.9666505558240696,
+        "f1-score": 0.9450679267572357,
+        "support": 8276.0
+      },
+      "S": {
+        "precision": 0.22458628841607564,
+        "recall": 0.34172661870503596,
+        "f1-score": 0.2710413694721826,
+        "support": 278.0
+      },
+      "VF": {
+        "precision": 0.7940074906367042,
+        "recall": 0.2683544303797468,
+        "f1-score": 0.4011352885525071,
+        "support": 790.0
+      },
+      "accuracy": 0.889019691780822,
+      "macro avg": {
+        "precision": 0.647673929740496,
+        "recall": 0.5255772016362842,
+        "f1-score": 0.5390815282606417,
+        "support": 9344.0
+      },
+      "weighted avg": {
+        "precision": 0.8925799569712,
+        "recall": 0.889019691780822,
+        "f1-score": 0.8790270270240401,
+        "support": 9344.0
+      }
+    }
+  },
+  "history": {
+    "accuracy": [
+      0.9285116195678711,
+      0.929120659828186,
+      0.9305925369262695,
+      0.9322928786277771,
+      0.9337647557258606,
+      0.9353127479553223
+    ],
+    "loss": [
+      0.03685864806175232,
+      0.0338895320892334,
+      0.03309475630521774,
+      0.03199325501918793,
+      0.03102574683725834,
+      0.03078366070985794
+    ],
+    "val_accuracy": [
+      0.895440936088562,
+      0.896618127822876,
+      0.8968321681022644,
+      0.8968321681022644,
+      0.8964040875434875,
+      0.8958690166473389
+    ],
+    "val_loss": [
+      0.06671620905399323,
+      0.06398025155067444,
+      0.06233701482415199,
+      0.061323557049036026,
+      0.060696739703416824,
+      0.060154229402542114
+    ],
+    "val_macro_f1": [
+      0.5317597657219547,
+      0.5225194799534388,
+      0.5141218539316822,
+      0.5088311159675613,
+      0.5038069413507557,
+      0.4991168629466502
+    ],
+    "learning_rate": [
+      1.9999999494757503e-05,
+      1.9999999494757503e-05,
+      1.9999999494757503e-05,
+      1.9999999494757503e-05,
+      1.9999999494757503e-05,
+      1.9999999494757503e-05
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0",
+  "platform": "ESP32-S3 N16R8",
+  "model": "stage1_n_s_vf_w16a16.espdl",
+  "model_md5": "0D75C5AA82AC614B40D5EDB98DF4D37C",
+  "task": "N/S/(V+F)",
+  "samples": 900,
+  "balanced_samples_per_class": 300,
+  "inference_failures": 0,
+  "host_reference": {
+    "accuracy": 0.6889,
+    "macro_f1": 0.6779,
+    "confusion_matrix": [[290, 6, 4], [176, 116, 8], [60, 26, 214]],
+    "per_class_f1": {"N": 0.7022, "S": 0.5179, "VF": 0.8137}
+  },
+  "device": {
+    "accuracy": 0.6989,
+    "macro_f1": 0.6963,
+    "confusion_matrix": [[281, 19, 0], [123, 170, 7], [71, 51, 178]],
+    "per_class_f1": {"N": 0.7252, "S": 0.6296, "VF": 0.7340},
+    "elapsed_seconds": 81.0,
+    "average_milliseconds_per_sample": 90.0
+  },
+  "host_device_agreement": 0.8611,
+  "notes": [
+    "Metrics were produced by the real ESP32-S3 board, not by PPQ simulation.",
+    "This is a research prototype and not a medical diagnostic device."
+  ]
+}

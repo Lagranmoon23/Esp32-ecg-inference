@@ -1,0 +1,2 @@
+source G:/esp-projects/esp32_ecg_inference_v1.0/firmware/build/gdbinit/symbols
+source G:/esp-projects/esp32_ecg_inference_v1.0/firmware/build/gdbinit/connect

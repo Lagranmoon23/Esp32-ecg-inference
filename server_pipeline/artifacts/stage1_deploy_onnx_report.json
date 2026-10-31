@@ -1,0 +1,29 @@
+{
+  "onnx": "/media/ecglab506/c91df7e1-f50c-468a-9741-41700680ea81/wym_mcu/MIT-BIH/mitdb-1.0.0/FPGA-based-Tiny-Transformer-model-for-ECG-Arrythmia-Classification/software/deployment_artifacts/primitive/stage1_n_s_vf_deploy.onnx",
+  "opset": 18,
+  "size_kib": 38.0,
+  "operator_counts": {
+    "Mul": 25,
+    "Add": 20,
+    "MatMul": 11,
+    "Reshape": 6,
+    "Transpose": 6,
+    "LayerNormalization": 4,
+    "Tanh": 4,
+    "Concat": 2,
+    "Conv": 1,
+    "Softmax": 1,
+    "Clip": 1,
+    "ReduceMean": 1,
+    "ReduceMax": 1
+  },
+  "total_nodes": 83,
+  "unsupported_for_esp_dl": [],
+  "golden_vs_keras": {
+    "samples": 96,
+    "max_abs_logit_diff": 0.001142764464020729,
+    "mean_abs_logit_diff": 0.00021379353711381555,
+    "top1_agreement": 1.0
+  },
+  "full_ds2": null
+}

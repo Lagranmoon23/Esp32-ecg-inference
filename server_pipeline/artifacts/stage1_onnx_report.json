@@ -1,0 +1,66 @@
+{
+  "weights": "/media/ecglab506/c91df7e1-f50c-468a-9741-41700680ea81/wym_mcu/MIT-BIH/mitdb-1.0.0/FPGA-based-Tiny-Transformer-model-for-ECG-Arrythmia-Classification/software/tiny_transformer_stage1_n_s_vf.weights.h5",
+  "onnx": "/media/ecglab506/c91df7e1-f50c-468a-9741-41700680ea81/wym_mcu/MIT-BIH/mitdb-1.0.0/FPGA-based-Tiny-Transformer-model-for-ECG-Arrythmia-Classification/software/deployment_artifacts/stage1_n_s_vf_b1.onnx",
+  "opset": 13,
+  "gelu_mode": "erf",
+  "onnx_size_kib": 55.2,
+  "parameters": 8335,
+  "operator_counts": {
+    "Mul": 29,
+    "Add": 25,
+    "MatMul": 8,
+    "Reshape": 6,
+    "Transpose": 6,
+    "GlobalAveragePool": 6,
+    "Sub": 4,
+    "Neg": 4,
+    "Sqrt": 4,
+    "Reciprocal": 4,
+    "Erf": 4,
+    "ReduceMean": 3,
+    "Gemm": 3,
+    "Conv": 1,
+    "Softmax": 1,
+    "ReduceMax": 1,
+    "Concat": 1
+  },
+  "total_nodes": 110,
+  "fp32_weight_kib": 32.6,
+  "reload_vs_saved": {
+    "max_abs_logit_diff": 0.0009761303663253784,
+    "top1_agreement": 1.0
+  },
+  "onnx_vs_keras_golden": {
+    "samples": 96,
+    "max_abs_logit_diff": 5.364418029785156e-07,
+    "mean_abs_logit_diff": 1.0520064819274921e-07,
+    "top1_agreement": 1.0,
+    "keras_accuracy": 0.71875,
+    "onnx_accuracy": 0.71875
+  },
+  "onnx_full_suite": {
+    "samples": 49661,
+    "accuracy": 0.9201586758220737,
+    "macro_f1": 0.6845117939575126
+  },
+  "rr_mean": [
+    [
+      0.7738568186759949,
+      0.7738577127456665,
+      0.7685967683792114,
+      0.7698602676391602,
+      1.0088012218475342,
+      1.0110942125320435
+    ]
+  ],
+  "rr_std": [
+    [
+      0.2045978307723999,
+      0.2046101838350296,
+      0.1760995090007782,
+      0.1728571653366089,
+      0.15597115457057953,
+      0.17440108954906464
+    ]
+  ]
+}

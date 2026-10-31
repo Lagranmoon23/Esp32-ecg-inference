@@ -1,0 +1,29 @@
+menu "ECG acquisition"
+
+config ECG_ADC_CHANNEL
+    int "AD8232 OUT ADC1 channel"
+    range 0 9
+    default 0
+    help
+        ESP32-S3 ADC1 channel 0 is GPIO1, channel 1 is GPIO2, and so on.
+
+config ECG_LO_PLUS_GPIO
+    int "AD8232 LO+ GPIO (-1 disables)"
+    range -1 48
+    default 2
+
+config ECG_LO_MINUS_GPIO
+    int "AD8232 LO- GPIO (-1 disables)"
+    range -1 48
+    default 3
+
+config ECG_STREAM_EVERY_N
+    int "Print one waveform row every N samples (0 disables)"
+    range 0 360
+    default 4
+
+config ECG_RUN_GOLDEN_TEST
+    bool "Run three exported golden vectors at startup"
+    default n
+
+endmenu

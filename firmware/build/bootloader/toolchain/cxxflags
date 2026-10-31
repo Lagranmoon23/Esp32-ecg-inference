@@ -1,0 +1,6 @@
+"-specs=G:/esp-projects/esp32_ecg_inference_v1.0/firmware/build/bootloader/specs/picolibc.specs"
+-mlongcalls
+-fno-builtin-memcpy
+-fno-builtin-memset
+-fno-builtin-bzero
+-fno-rtti
